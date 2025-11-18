@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	environment {
-		IMAGE_NAME = " beja /jenkins-docker-nginx"
+		IMAGE_NAME = " beja/jenkins-docker-nginx"
 		IMAGE_TAG = "latest"
 		CONTAINER_NAME = " beja-nginx-app "
 	}
