@@ -1,9 +1,9 @@
 pipeline {
 	agent any
 	environment {
-		IMAGE_NAME = " bejasz/jenkins-docker-nginx"
+		IMAGE_NAME = "bejasz/jenkins-docker-nginx"
 		IMAGE_TAG = "latest"
-		CONTAINER_NAME = " beja-nginx-app "
+		CONTAINER_NAME = "beja-nginx-app"
 	}
 	stages {
 		stage('Build Docker Image') {
@@ -25,7 +25,7 @@ pipeline {
 	stage('Push Docker Image to Docker Hub') {
 		steps {
 			script {
-					docker.withRegistry('https://index.docker.io/v1/', ' my-docker-token ') {
+					docker.withRegistry('https://index.docker.io/v1/', 'my-docker-token') {
 					customImage.push()
 					}
 				}
